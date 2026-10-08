@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD Negeri 119 Cijagra - Membangun Generasi Cerdas & Berkarakter</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Quicksand & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284C7',
+                            sky: '#0EA5E9',
+                            lightsky: '#E0F2FE',
+                            yellow: '#F59E0B',
+                            amber: '#FACC15',
+                            green: '#10B981',
+                            dark: '#0F172A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Quicksand', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-slate-700 bg-slate-50 antialiased selection:bg-brand-sky selection:text-white">
+
+    <!-- NAVBAR HEADER -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo Sekolah -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-blue to-brand-sky flex items-center justify-center text-white text-2xl shadow-md shadow-brand-sky/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xl font-extrabold font-heading text-slate-800 leading-tight">SD Negeri 119 Cijagra</span>
+                        <span class="block text-xs font-medium text-brand-blue tracking-wide">Cerdas • Ceria • Berkarakter</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+                    <a href="#beranda" class="hover:text-brand-blue transition-colors">Beranda</a>
+                    <a href="#profil" class="hover:text-brand-blue transition-colors">Profil</a>
+                    <a href="#keunggulan" class="hover:text-brand-blue transition-colors">Keunggulan</a>
+                    <a href="#kurikulum" class="hover:text-brand-blue transition-colors">Kurikulum</a>
+                    <a href="#fasilitas" class="hover:text-brand-blue transition-colors">Fasilitas</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="https://wa.me/6281534700156" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp Kami</span>
+                    </a>
+                    <a href="#kontak" class="inline-flex items-center gap-2 bg-brand-yellow hover:bg-amber-500 text-slate-900 font-bold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all text-sm">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Hubungi Kami</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden p-2 text-slate-600 hover:text-brand-blue focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#beranda" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100 font-semibold">Beranda</a>
+            <a href="#profil" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100 font-semibold">Profil</a>
+            <a href="#keunggulan" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100 font-semibold">Keunggulan</a>
+            <a href="#kurikulum" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100 font-semibold">Kurikulum</a>
+            <a href="#fasilitas" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100 font-semibold">Fasilitas</a>
+            <a href="https://wa.me/6281534700156" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 rounded-xl bg-emerald-500 text-white font-bold text-center">
+                <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp Kami
+            </a>
+            <a href="#kontak" class="block px-3 py-2 rounded-xl bg-brand-yellow text-slate-900 font-bold text-center">Hubungi Kami</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="relative pt-8 pb-16 md:py-24 overflow-hidden bg-gradient-to-b from-brand-lightsky/50 via-white to-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content Left -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading text-slate-900 leading-tight">
+                        Membangun Generasi <span class="text-brand-blue">Cerdas</span>, <span class="text-brand-yellow">Kreatif</span> & <span class="text-brand-green">Berkarakter</span>
+                    </h1>
+                    
+                    <p class="text-slate-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        SD Negeri 119 Cijagra menghadirkan lingkungan belajar ramah anak yang menyenangkan, aman, serta memadukan kurikulum nasional modern dengan pembentukan karakter unggul.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://wa.me/6281534700156" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-emerald-500/25 hover:shadow-xl transition-all">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Chat via WhatsApp</span>
+                        </a>
+                        <a href="#profil" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-700 font-bold px-6 py-4 rounded-2xl border border-slate-200 transition-all">
+                            <i class="fa-solid fa-circle-play text-brand-yellow"></i>
+                            <span>Jelajahi Profil</span>
+                        </a>
+                    </div>
+
+                    <!-- Fast Facts -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-2xl md:text-3xl font-extrabold font-heading text-slate-900">A</p>
+                            <p class="text-xs text-slate-500 font-medium">Akreditasi Unggul</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl md:text-3xl font-extrabold font-heading text-slate-900">100%</p>
+                            <p class="text-xs text-slate-500 font-medium">Guru Tersertifikasi</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl md:text-3xl font-extrabold font-heading text-slate-900">15+</p>
+                            <p class="text-xs text-slate-500 font-medium">Ekstrakurikuler</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Right -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-amber/30 to-brand-sky/30 rounded-3xl transform rotate-3 blur-sm"></div>
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000&auto=format&fit=crop" alt="Siswa SD Negeri 119 Cijagra Belajar Bersama" class="relative rounded-3xl shadow-2xl object-cover w-full h-[420px]">
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4 hidden sm:flex">
+                            <div class="w-12 h-12 rounded-xl bg-green-100 text-brand-green flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-shield-heart"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">Lingkungan Ramah Anak</p>
+                                <p class="text-xs text-slate-500">Aman, Asri & Kondusif</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SAMBUTAN KEPALA SEKOLAH (PROFIL) -->
+    <section id="profil" class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-brand-lightsky/60 to-slate-50 rounded-3xl p-8 md:p-12 border border-slate-100 shadow-sm">
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-4 text-center">
+                        <div class="relative inline-block">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="Kepala Sekolah SD Negeri 119 Cijagra" class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-lg mx-auto">
+                            <div class="absolute bottom-2 right-2 bg-brand-yellow text-slate-900 p-2 rounded-full shadow">
+                                <i class="fa-solid fa-quote-right text-sm"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold font-heading text-slate-800 mt-4">Ida Wardatin, S.Pd.</h3>
+                        <p class="text-xs text-brand-blue font-semibold">Kepala Sekolah SD Negeri 119 Cijagra</p>
+                    </div>
+                    <div class="md:col-span-8 space-y-4">
+                        <div class="inline-block bg-white px-3 py-1 rounded-full text-xs font-bold text-brand-blue border border-slate-200">
+                            Sambutan Kepala Sekolah
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold font-heading text-slate-900">Selamat Datang di SD Negeri 119 Cijagra</h2>
+                        <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                            "Setiap anak lahir dengan potensi unik dan istimewa. Di SD Negeri 119 Cijagra, kami berkomitmen mendampingi tumbuh kembang putra-putri Anda tidak hanya dalam aspek akademis, namun juga penguatan nilai agama, moral, kreativitas, dan kepribadian yang mandiri."
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                            Mari bergandengan tangan menciptakan masa depan yang gemilang bagi penerus bangsa dalam suasana belajar yang menyenangkan!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEUNGGULAN SEKOLAH -->
+    <section id="keunggulan" class="py-16 md:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-blue font-bold text-xs uppercase tracking-widest bg-brand-lightsky px-3 py-1 rounded-full">Mengapa Memilih Kami</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold font-heading text-slate-900">Keunggulan SD Negeri 119 Cijagra</h2>
+                <p class="text-slate-600 text-sm md:text-base">Pendidikan berkualitas yang disesuaikan dengan kebutuhan tumbuh kembang anak abad ke-21.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-sky-100 text-brand-blue flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-slate-800 mb-2">Kurikulum Terpadu</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Mengombinasikan Kurikulum Merdeka dengan penguatan karakter mulia dan pembelajaran berbasis STEAM.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-100 text-brand-yellow flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-slate-800 mb-2">Guru Profesional</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Tenaga pendidik tersertifikasi, berpengalaman, sabar, dan menguasai metode pembelajaran ramah anak.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-brand-green flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-slate-800 mb-2">Lingkungan Aman</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Gedung sekolah bersih, hijau, dilengkapi CCTV 24 jam, serta menerapkan standar bebas perundungan (anti-bullying).
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-slate-800 mb-2">Ekskul Beragam</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Wadah pengembangan bakat siswa mulai dari Robotik, Seni Tari, Pencak Silat, Futsal, hingga Pramuka.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROGRAM & KURIKULUM -->
+    <section id="kurikulum" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="space-y-6">
+                    <span class="text-brand-blue font-bold text-xs uppercase tracking-widest bg-brand-lightsky px-3 py-1 rounded-full">Metode Pembelajaran</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold font-heading text-slate-900 leading-tight">
+                        Program Pendidikan Adaptif & Interaktif
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                        Kami percaya bahwa belajar harus menjadi proses yang menyenangkan. Melalui metode interaktif, anak-anak diajak untuk aktif berdiskusi, bereksperimen, dan memecahkan masalah sejak dini.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-lightsky text-brand-blue flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-check font-bold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-base">Project-Based Learning</h4>
+                                <p class="text-slate-600 text-sm">Pembelajaran berbasis proyek untuk mengasah kerja sama tim dan kreativitas siswa.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-brand-yellow flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-check font-bold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-base">Penguatan Karakter & Keagamaan</h4>
+                                <p class="text-slate-600 text-sm">Pembiasaan doa harian, literasi Al-Qur'an/bimbingan rohani, serta nilai toleransi.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-brand-green flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-check font-bold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-base">Literasi & Digital Mindset</h4>
+                                <p class="text-slate-600 text-sm">Pengenalan teknologi dasar secara bijak dan sehat sesuai usia perkembangan anak.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=600&auto=format&fit=crop" alt="Kegiatan Kelas Interaktif" class="rounded-3xl shadow-md w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=600&auto=format&fit=crop" alt="Praktek Sains Siswa SD" class="rounded-3xl shadow-md w-full h-64 object-cover mt-8">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FASILITAS SEKOLAH -->
+    <section id="fasilitas" class="py-16 md:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-blue font-bold text-xs uppercase tracking-widest bg-brand-lightsky px-3 py-1 rounded-full">Sarana Belajar</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold font-heading text-slate-900">Fasilitas Modern & Nyaman</h2>
+                <p class="text-slate-600 text-sm md:text-base">Didesain khusus untuk mendukung keamanan dan kenyamanan belajar siswa.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm group">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=600&auto=format&fit=crop" alt="Ruang Kelas AC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-800 mb-2">Ruang Kelas Ber-AC & Proyektor</h3>
+                        <p class="text-slate-600 text-sm">Kelas bersih, terang, dan dilengkapi media pembelajaran multimedia.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm group">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1568667256549-094345857637?q=80&w=600&auto=format&fit=crop" alt="Perpustakaan Sekolah" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-800 mb-2">Perpustakaan Digital & Pojok Baca</h3>
+                        <p class="text-slate-600 text-sm">Ribuan koleksi buku cerita dan ensiklopedia anak yang menarik.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm group">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=600&auto=format&fit=crop" alt="Laboratorium Komputer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-800 mb-2">Lab Komputer & Sains</h3>
+                        <p class="text-slate-600 text-sm">Fasilitas praktikum modern yang aman bagi anak-anak sekolah dasar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/6281534700156" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-3 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 group" aria-label="Chat via WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="hidden md:inline pr-1 text-sm">Chat Kami</span>
+    </a>
+
+    <!-- FOOTER & KONTAK -->
+    <footer id="kontak" class="bg-slate-900 text-slate-300 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 pb-12 border-b border-slate-800">
+                
+                <!-- Info Sekolah -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-blue flex items-center justify-center text-white text-xl">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <span class="text-2xl font-extrabold font-heading text-white">SD Negeri 119 Cijagra</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                        Mewujudkan lembaga pendidikan dasar unggul yang melahirkan generasi cerdas, mandiri, berkarakter mulia, dan berwawasan lingkungan.
+                    </p>
+                    <div class="flex gap-3 pt-2">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-blue text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-blue text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-blue text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Kontak Detail -->
+                <div class="lg:col-span-4 space-y-4">
+                    <h4 class="text-white font-bold font-heading text-lg">Hubungi Kami</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-brand-yellow mt-1"></i>
+                            <span>Jl. Pendidikan No. 45, Kecamatan Merdeka, Kota Bandung, Jawa Barat 40123</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-yellow"></i>
+                            <span>(022) 7654-3210</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <a href="https://wa.me/6281534700156" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-slate-400 hover:text-emerald-400 transition-colors">
+                                <i class="fa-brands fa-whatsapp text-emerald-500 text-lg"></i>
+                                <span>+62 815-3470-0156</span>
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-yellow"></i>
+                            <span>info@sdnusantara.sch.id</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card Alamat & Jam Operasional (Menggantikan Maps) -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="text-white font-bold font-heading text-lg">Jam Operasional Sekretariat</h4>
+                    <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700/60 space-y-3">
+                        <div class="flex justify-between items-center text-sm border-b border-slate-700/80 pb-2">
+                            <span class="text-slate-400">Senin - Kamis</span>
+                            <span class="font-bold text-white">07.30 - 15.00 WIB</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm border-b border-slate-700/80 pb-2">
+                            <span class="text-slate-400">Jumat</span>
+                            <span class="font-bold text-white">07.30 - 11.30 WIB</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-slate-400">Sabtu - Minggu</span>
+                            <span class="text-brand-yellow font-semibold">Tutup</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 text-center text-xs text-slate-500">
+                <p>&copy; 2026 SD Negeri 119 Cijagra. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking nav items
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
